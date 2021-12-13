@@ -5,7 +5,7 @@ BUILD := $(shell git rev-parse --short HEAD)
 BIN_OUTPUT ?= bin/distribyted-$(VERSION)-`go env GOOS`-`go env GOARCH``go env GOEXE`
 PROJECTNAME := $(shell basename "$(PWD)")
 
-go-cross-compile: GOPATH=~/go
+go-cross-compile: GOPATH=$HOME/go
 go-cross-compile: ORGPATH=$(GOPATH)/src/github.com/distribyted
 go-cross-compile: REPOPATH=$(ORGPATH)/distribyted
 
